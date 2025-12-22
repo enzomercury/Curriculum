@@ -28,7 +28,7 @@
             background-color: #e0e0e0;
             font-family: 'Source Sans Pro', sans-serif;
             color: var(--text-color);
-            line-height: 1.5;
+            line-height: 1.35;
             -webkit-print-color-adjust: exact;
         }
 
@@ -36,95 +36,95 @@
         .cv-page {
             width: 210mm;
             min-height: 297mm;
-            margin: 20px auto;
+            margin: 10px auto;
             background: var(--bg-color);
             display: flex;
-            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
             position: relative;
         }
 
         /* Sidebar Column */
         .sidebar {
-            width: 32%;
+            width: 30%;
             background-color: var(--sidebar-bg);
-            padding: 40px 25px;
+            padding: 25px 20px;
             border-right: 1px solid var(--border-color);
         }
 
         /* Main Column */
         .main-content {
-            width: 68%;
-            padding: 40px 40px;
+            width: 70%;
+            padding: 30px 35px;
         }
 
         /* Typography */
         h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 32px;
+            font-size: 26px;
             color: var(--primary-color);
-            margin-bottom: 5px;
+            margin-bottom: 3px;
             letter-spacing: 1px;
             text-transform: uppercase;
         }
 
         h2 {
             font-family: 'Playfair Display', serif;
-            font-size: 18px;
+            font-size: 16px;
             color: var(--primary-color);
-            margin-bottom: 12px;
-            padding-bottom: 5px;
+            margin-bottom: 8px;
+            padding-bottom: 3px;
             border-bottom: 2px solid var(--accent-color);
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
 
         h3 {
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 600;
             color: var(--primary-color);
-            margin-bottom: 2px;
+            margin-bottom: 1px;
         }
 
         .section {
-            margin-bottom: 25px;
+            margin-bottom: 15px;
         }
 
         p, li {
-            font-size: 13px;
-            margin-bottom: 4px;
+            font-size: 11.5px;
+            margin-bottom: 3px;
             text-align: justify;
         }
 
         /* Sidebar Sections */
         .sidebar-section {
-            margin-bottom: 30px;
+            margin-bottom: 18px;
         }
 
         .sidebar-title {
             font-family: 'Playfair Display', serif;
-            font-size: 16px;
+            font-size: 13px;
             color: var(--primary-color);
             border-bottom: 1px solid var(--accent-color);
-            margin-bottom: 15px;
-            padding-bottom: 5px;
+            margin-bottom: 8px;
+            padding-bottom: 2px;
             text-transform: uppercase;
         }
 
         .contact-item {
             display: flex;
             flex-direction: column;
-            margin-bottom: 12px;
+            margin-bottom: 6px;
         }
 
         .contact-label {
             font-weight: 600;
-            font-size: 11px;
+            font-size: 9.5px;
             text-transform: uppercase;
             color: var(--secondary-color);
         }
 
         .contact-value {
-            font-size: 13px;
+            font-size: 11px;
             word-break: break-all;
         }
 
@@ -133,28 +133,28 @@
             text-decoration: none;
         }
 
-        /* Work & Education Items */
+        /* Items */
         .item {
-            margin-bottom: 18px;
+            margin-bottom: 8px;
         }
 
         .item-header {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            margin-bottom: 4px;
+            margin-bottom: 1px;
         }
 
         .item-sub {
             font-style: italic;
             color: var(--secondary-color);
-            font-size: 13px;
-            margin-bottom: 5px;
+            font-size: 11px;
+            margin-bottom: 2px;
             display: block;
         }
 
         .item-date {
-            font-size: 12px;
+            font-size: 10.5px;
             color: var(--secondary-color);
             font-weight: 600;
             white-space: nowrap;
@@ -175,36 +175,39 @@
         }
 
         .skill-group {
-            margin-bottom: 15px;
+            margin-bottom: 8px;
         }
 
         .skill-tag {
             display: inline-block;
             background: var(--bg-color);
-            padding: 3px 8px;
-            margin: 2px;
-            border-radius: 4px;
-            font-size: 11px;
+            padding: 1px 5px;
+            margin: 1px;
+            border-radius: 3px;
+            font-size: 10px;
             border: 1px solid var(--border-color);
         }
 
+        /* Courses Grid - 2 Columns */
         .courses-grid {
             display: grid;
-            grid-template-columns: 1fr;
-            gap: 2px;
+            grid-template-columns: 1fr 1fr;
+            gap: 3px 12px;
         }
 
         .course-item {
-            font-size: 11.5px;
-            padding: 2px 0;
+            font-size: 10px;
+            padding: 1px 0;
             border-bottom: 1px dashed var(--border-color);
+            line-height: 1.2;
         }
 
         /* Print Adjustments */
         @media print {
             body { background: none; }
-            .cv-page { margin: 0; box-shadow: none; border: none; }
+            .cv-page { margin: 0; box-shadow: none; border: none; width: 100%; }
             .no-print { display: none; }
+            .section { page-break-inside: avoid; }
         }
     </style>
 </head>
@@ -228,12 +231,11 @@
                     <span class="contact-value">091 619 677</span>
                 </div>
                 <div class="contact-item">
-                    <span class="contact-label">Email Institucional</span>
-                    <span class="contact-value"><a href="mailto:enzo.roman@docente.ceibal.edu.uy">enzo.roman@docente.ceibal.edu.uy</a></span>
-                </div>
-                <div class="contact-item">
-                    <span class="contact-label">Email Personal</span>
-                    <span class="contact-value"><a href="mailto:enzoromanal@gmail.com">enzoromanal@gmail.com</a></span>
+                    <span class="contact-label">Emails</span>
+                    <span class="contact-value" style="font-size: 10px;">
+                        <a href="mailto:enzo.roman@docente.ceibal.edu.uy">enzo.roman@docente.ceibal.edu.uy</a><br>
+                        <a href="mailto:enzoromanal@gmail.com">enzoromanal@gmail.com</a>
+                    </span>
                 </div>
                 <div class="contact-item">
                     <span class="contact-label">Web</span>
@@ -248,12 +250,8 @@
                     <span class="contact-value">21/06/1999</span>
                 </div>
                 <div class="contact-item">
-                    <span class="contact-label">Nacionalidad</span>
-                    <span class="contact-value">Uruguayo</span>
-                </div>
-                <div class="contact-item">
-                    <span class="contact-label">Documento</span>
-                    <span class="contact-value">5.348.415-8</span>
+                    <span class="contact-label">Nacionalidad / CI</span>
+                    <span class="contact-value">Uruguayo | 5.348.415-8</span>
                 </div>
                 <div class="contact-item">
                     <span class="contact-label">C.C.</span>
@@ -263,55 +261,49 @@
 
             <div class="sidebar-section">
                 <div class="sidebar-title">Idiomas</div>
-                <p><strong>Español:</strong> Nativo</p>
-                <p><strong>Portugués:</strong> Avanzado</p>
-                <p><strong>Inglés:</strong> Nivel A1 (Cambridge Certification)</p>
+                <p style="font-size: 11px;"><strong>Español:</strong> Nativo</p>
+                <p style="font-size: 11px;"><strong>Portugués:</strong> Avanzado</p>
+                <p style="font-size: 11px;"><strong>Inglés:</strong> Nivel A1 (Cambridge)</p>
             </div>
 
             <div class="sidebar-section">
                 <div class="sidebar-title">Competencias Técnicas</div>
                 <div class="skill-group">
-                    <span class="contact-label">Lenguajes</span><br>
-                    <span class="skill-tag">HTML</span> <span class="skill-tag">CSS</span> 
-                    <span class="skill-tag">JavaScript</span> <span class="skill-tag">Python</span>
-                </div>
-                <div class="skill-group">
-                    <span class="contact-label">Herramientas</span><br>
-                    <span class="skill-tag">MakeCode</span> <span class="skill-tag">Scratch</span> 
-                    <span class="skill-tag">Teachable Machine</span> <span class="skill-tag">WordPress</span> 
-                    <span class="skill-tag">Figma</span> <span class="skill-tag">Notion</span>
+                    <span class="contact-label">Tecnologías</span><br>
+                    <span class="skill-tag">HTML/CSS</span> <span class="skill-tag">JS</span> 
+                    <span class="skill-tag">Python</span> <span class="skill-tag">Scratch</span>
+                    <span class="skill-tag">MakeCode</span> <span class="skill-tag">Figma</span>
                 </div>
                 <div class="skill-group">
                     <span class="contact-label">Videojuegos</span><br>
-                    <span class="skill-tag">Game Maker Studio</span> <span class="skill-tag">MakeCode Arcade</span> 
-                    <span class="skill-tag">Roblox Studio</span>
+                    <span class="skill-tag">Game Maker</span> <span class="skill-tag">Roblox Studio</span>
                 </div>
                 <div class="skill-group">
                     <span class="contact-label">Especialidades</span><br>
-                    <span class="skill-tag">Accesibilidad Web</span> <span class="skill-tag">IA Generativa</span> 
-                    <span class="skill-tag">Metodologías Ágiles</span> <span class="skill-tag">Robótica</span>
+                    <span class="skill-tag">Accesibilidad</span> <span class="skill-tag">IA Gen</span> 
+                    <span class="skill-tag">Robótica</span> <span class="skill-tag">Notion</span>
                 </div>
             </div>
 
             <div class="sidebar-section">
                 <div class="sidebar-title">Referencias</div>
-                <p><strong>Erika Díaz</strong><br>Docente | 093 860 853</p>
-                <p><strong>Carol Fernández</strong><br>Docente | 091 094 409</p>
-                <p><strong>Ximena Márquez</strong><br>Abogada | 092 382 634</p>
+                <p style="font-size: 10.5px; margin-bottom: 4px;"><strong>Erika Díaz</strong><br>Docente | 093 860 853</p>
+                <p style="font-size: 10.5px; margin-bottom: 4px;"><strong>Carol Fernández</strong><br>Docente | 091 094 409</p>
+                <p style="font-size: 10.5px;"><strong>Ximena Márquez</strong><br>Abogada | 092 382 634</p>
             </div>
         </aside>
 
         <!-- MAIN CONTENT -->
         <main class="main-content">
-            <header style="margin-bottom: 30px; text-align: center;">
+            <header style="margin-bottom: 15px; text-align: center;">
                 <h1>Enzo Román Celada</h1>
-                <p style="font-weight: 600; color: var(--secondary-color); text-transform: uppercase; letter-spacing: 2px;">Licenciado en Pedagogía | Docente | Programador</p>
+                <p style="font-weight: 600; color: var(--secondary-color); text-transform: uppercase; letter-spacing: 1px; font-size: 11.5px;">Licenciado en Pedagogía | Profesor de Historia | Programador</p>
             </header>
 
             <section class="section">
                 <h2>Perfil Profesional</h2>
                 <p>
-                    Licenciado en Pedagogía (opción Profesor de Educación Media), docente y programador con sólida formación pedagógica y amplia experiencia en proyectos tecnológicos y educativos. Integro una pedagogía humanista con la innovación digital, aplicando herramientas de programación, robótica, inteligencia artificial y desarrollo de videojuegos en entornos educativos. Me especializo en el diseño de propuestas inclusivas, accesibles y contextualizadas, orientadas al pensamiento crítico, la justicia social y la democratización del conocimiento. Busco integrarme en equipos vinculados a tecnología educativa, desarrollo web, IA aplicada, videojuegos y accesibilidad digital, donde pueda aportar creatividad, conocimiento técnico y una visión pedagógica transformadora.
+                    Licenciado en Pedagogía (opción Profesor de Educación Media) y Profesor de Historia, formación en Ciencias Sociales y experiencia en educación media. Mi práctica docente se inscribe en una pedagogía humanista y crítica, orientada a la construcción de ciudadanía, el análisis histórico contextualizado y la reflexión sobre las desigualdades sociales. Aplico herramientas de programación, robótica, inteligencia artificial y videojuegos en entornos educativos. Me especializo en el diseño de propuestas inclusivas, accesibles y contextualizadas.
                 </p>
             </section>
 
@@ -325,22 +317,18 @@
                     </div>
                     <span class="item-sub">Liceo Tacuabé (Artigas)</span>
                     <ul class="bullet-list">
-                        <li>Diseño y ejecución de proyectos educativos con micro:bit e inteligencia artificial generativa.</li>
-                        <li>Creación de aplicaciones web educativas.</li>
-                        <li>Coordinación de proyectos interdisciplinarios vinculados a robótica, sustentabilidad e inteligencia artificial.</li>
+                        <li>Proyectos con micro:bit e IA generativa; creación de aplicaciones web educativas.</li>
                     </ul>
                 </div>
 
                 <div class="item">
                     <div class="item-header">
-                        <h3>Docente de Videojuegos (Técnicas Informáticas II)</h3>
+                        <h3>Docente de Videojuegos (Técnicas Inf. II)</h3>
                         <span class="item-date">Actualidad</span>
                     </div>
                     <span class="item-sub">Escuela Técnica de Artigas (UTU)</span>
                     <ul class="bullet-list">
-                        <li>Enseñanza del desarrollo de videojuegos utilizando Game Maker Studio, MakeCode Arcade y Roblox Studio.</li>
-                        <li>Introducción a la lógica de programación, diseño de niveles, narrativa interactiva y animación digital.</li>
-                        <li>Fomento del pensamiento computacional, el trabajo colaborativo y la creatividad en proyectos prácticos.</li>
+                        <li>Enseñanza de Game Maker, MakeCode Arcade y Roblox Studio; lógica de programación.</li>
                     </ul>
                 </div>
 
@@ -351,9 +339,7 @@
                     </div>
                     <span class="item-sub">Liceo Nº3 de Artigas</span>
                     <ul class="bullet-list">
-                        <li>Seguimiento académico y acompañamiento personalizado a estudiantes.</li>
-                        <li>Diseño de estrategias de intervención educativa en contextos diversos.</li>
-                        <li>Coordinación con equipos multidisciplinarios para la mejora de las trayectorias.</li>
+                        <li>Seguimiento personalizado y diseño de estrategias de intervención educativa.</li>
                     </ul>
                 </div>
 
@@ -364,63 +350,43 @@
                     </div>
                     <span class="item-sub">Escuela Técnica de Artigas (UTU)</span>
                     <ul class="bullet-list">
-                        <li>Tutoría académica enfocada en inclusión educativa y competencias digitales.</li>
-                        <li>Acompañamiento en proyectos de formación técnica y desarrollo personal.</li>
+                        <li>Tutoría académica enfocada en inclusión y desarrollo de competencias digitales.</li>
                     </ul>
                 </div>
 
                 <div class="item">
                     <div class="item-header">
-                        <h3>Docente Interino de Historia (7º año)</h3>
+                        <h3>Docencia en Historia e Historia del Arte</h3>
                         <span class="item-date">-</span>
                     </div>
-                    <span class="item-sub">Escuela Agraria de Artigas</span>
-                    <p>Enseñanza de Historia y ciudadanía en contextos rurales incorporando tecnologías educativas y metodologías activas.</p>
-                </div>
-
-                <div class="item">
-                    <div class="item-header">
-                        <h3>Docente de Historia del Arte</h3>
-                        <span class="item-date">-</span>
-                    </div>
-                    <span class="item-sub">Liceo Departamental Nº1 (Artigas)</span>
-                    <p>Aplicación de herramientas digitales y recursos audiovisuales para el análisis crítico de obras artísticas.</p>
-                </div>
-
-                <div class="item">
-                    <div class="item-header">
-                        <h3>Docente de Historia</h3>
-                        <span class="item-date">-</span>
-                    </div>
-                    <span class="item-sub">Liceo Nº2 y Escuela Técnica Nº2 (Salto / Artigas)</span>
-                    <p>Coordinación de proyectos de investigación histórica con uso de TIC y fomento de la ciudadanía digital.</p>
+                    <span class="item-sub">Escuela Agraria | Liceo Departamental Nº1 | Liceo Nº2</span>
+                    <p>Enseñanza con metodologías activas e incorporación de TIC para el análisis crítico e investigación.</p>
                 </div>
             </section>
 
             <section class="section">
                 <h2>Formación Académica</h2>
-                <div class="item">
+                <div class="item" style="margin-bottom: 4px;">
                     <div class="item-header">
-                        <h3>Licenciado en Pedagogía</h3>
+                        <h3>Licenciado en Pedagogía (Prof. Ed. Media)</h3>
                         <span class="item-date">2025</span>
                     </div>
-                    <span class="item-sub">Opción: Profesor de Educación Media</span>
                 </div>
-                <div class="item">
+                <div class="item" style="margin-bottom: 4px;">
                     <div class="item-header">
                         <h3>Profesorado de Historia</h3>
                         <span class="item-date">2020 – 2023</span>
                     </div>
-                    <span class="item-sub">CeRP del Litoral – Salto | Promedio general: 90,468</span>
+                    <span class="item-sub">CeRP del Litoral – Salto | Promedio: 90,468</span>
                 </div>
-                <div class="item">
+                <div class="item" style="margin-bottom: 4px;">
                     <div class="item-header">
                         <h3>Licenciatura en Relaciones Laborales</h3>
                         <span class="item-date">En curso</span>
                     </div>
-                    <span class="item-sub">Universidad de la República (UDELAR)</span>
+                    <span class="item-sub">UDELAR</span>
                 </div>
-                <div class="item">
+                <div class="item" style="margin-bottom: 4px;">
                     <div class="item-header">
                         <h3>Abogacía</h3>
                         <span class="item-date">2018</span>
@@ -431,14 +397,14 @@
 
             <section class="section">
                 <h2>Especialización Técnica</h2>
-                <div class="item">
+                <div class="item" style="margin-bottom: 4px;">
                     <div class="item-header">
-                        <h3>Postítulo: Tecnologías Digitales y Educación Inclusiva</h3>
+                        <h3>Postítulo: Tecnologías Digitales y Ed. Inclusiva</h3>
                         <span class="item-date">2024</span>
                     </div>
                     <span class="item-sub">Ceibal – 150 horas</span>
                 </div>
-                <div class="item">
+                <div class="item" style="margin-bottom: 4px;">
                     <div class="item-header">
                         <h3>Jóvenes a Programar</h3>
                         <span class="item-date">2023</span>
@@ -447,65 +413,51 @@
                 </div>
             </section>
 
-            <section class="section" style="page-break-before: always; padding-top: 40px;">
+            <section class="section">
                 <h2>Cursos y Certificaciones</h2>
                 <div class="courses-grid">
-                    <div class="course-item"><strong>Robótica en el Aula</strong> – Ceibal (2025)</div>
-                    <div class="course-item"><strong>Hacer con IA Generativa en Contextos Educativos</strong> – Ceibal (2025)</div>
-                    <div class="course-item"><strong>Entender la Inteligencia Artificial</strong> – Ceibal</div>
-                    <div class="course-item"><strong>Accesibilidad Web: Introducción a las Rampas Digitales</strong> – Ceibal</div>
-                    <div class="course-item"><strong>Fundamentos de Programación</strong> (40 horas)</div>
-                    <div class="course-item"><strong>Ciberseguridad en el Entorno Educativo</strong> (30 horas)</div>
-                    <div class="course-item"><strong>Alfabetización Digital</strong> (30 horas)</div>
-                    <div class="course-item"><strong>Inteligencia Artificial: Promesas, Realidades y Desafíos</strong> (15 horas)</div>
-                    <div class="course-item"><strong>Creación de Contenidos Digitales en Entornos Educativos</strong> (30 horas)</div>
-                    <div class="course-item"><strong>Comunicación y Colaboración en la Era Digital</strong> (30 horas)</div>
-                    <div class="course-item"><strong>Aprendizaje Colaborativo Online y su Implicancia Didáctica</strong> (30 horas)</div>
-                    <div class="course-item"><strong>Neurodidáctica</strong> (30 horas)</div>
-                    <div class="course-item"><strong>Mediación Docente para el Aprendizaje y la Metacognición</strong> (30 horas)</div>
-                    <div class="course-item"><strong>Habilidades Socioemocionales</strong> (30 horas)</div>
-                    <div class="course-item"><strong>ANEP: Hacia una Transformación Curricular Integral</strong> (30 horas)</div>
-                    <div class="course-item"><strong>Funciones Ejecutivas en el Aula</strong> (15 horas)</div>
-                    <div class="course-item"><strong>Género, Discapacidad y Educación</strong> (10 horas)</div>
-                    <div class="course-item"><strong>Familias y Pantallas</strong> (15 horas)</div>
-                    <div class="course-item"><strong>Competencias Digitales para Profesionales</strong> (40 horas – 2022)</div>
-                    <div class="course-item"><strong>Plataforma CREA</strong> (10 horas)</div>
-                    <div class="course-item"><strong>Navegación Segura</strong> – ESET (2019–2020)</div>
-                    <div class="course-item">Virtualidad, Emociones y Educación | Tecnologías en Primera Infancia</div>
-                    <div class="course-item">Extensión Universitaria y Educación | Jornadas de Ciencia Política y Derecho Laboral</div>
-                    <div class="course-item">Congreso Internacional de Historia del Norte</div>
+                    <div class="course-item"><strong>Robótica en el Aula</strong> (2025)</div>
+                    <div class="course-item"><strong>Hacer con IA Generativa</strong> (2025)</div>
+                    <div class="course-item">Entender la IA – Ceibal</div>
+                    <div class="course-item">Accesibilidad Web – Ceibal</div>
+                    <div class="course-item">Fundamentos Programación (40h)</div>
+                    <div class="course-item">Ciberseguridad Educativa (30h)</div>
+                    <div class="course-item">Alfabetización Digital (30h)</div>
+                    <div class="course-item">IA: Promesas y Realidades (15h)</div>
+                    <div class="course-item">Contenidos Digitales (30h)</div>
+                    <div class="course-item">Comunicación Era Digital (30h)</div>
+                    <div class="course-item">Aprendizaje Colaborativo (30h)</div>
+                    <div class="course-item">Neurodidáctica (30h)</div>
+                    <div class="course-item">Mediación y Metacognición (30h)</div>
+                    <div class="course-item">Habilidades Socioemocionales</div>
+                    <div class="course-item">Transformación Curricular (30h)</div>
+                    <div class="course-item">Funciones Ejecutivas (15h)</div>
+                    <div class="course-item">Género y Discapacidad (10h)</div>
+                    <div class="course-item">Familias y Pantallas (15h)</div>
+                    <div class="course-item">Competencias Digitales (40h)</div>
+                    <div class="course-item">Plataforma CREA (10h)</div>
+                    <div class="course-item">Navegación Segura – ESET</div>
+                    <div class="course-item">Virtualidad y Emociones</div>
+                    <div class="course-item">Tecnologías Primera Infancia</div>
+                    <div class="course-item">Extensión Univ. y Ed.</div>
                 </div>
             </section>
 
             <section class="section">
-                <h2>Ponencias</h2>
-                <ul class="bullet-list">
-                    <li>“Población afrodescendiente e impacto de la Ley 19.122”</li>
-                    <li>“Identidades en resistencia: represiones a personas trans en dictaduras latinoamericanas”</li>
-                </ul>
-            </section>
-
-            <section class="section">
-                <h2>Proyectos Destacados</h2>
-                <div class="item">
-                    <h3>App “Docente Ágil”</h3>
-                    <p>Aplicación sin código para planificación didáctica y gestión docente.</p>
-                </div>
-                <div class="item">
-                    <h3>Sistema de Biblioteca Liceo Tacuabé</h3>
-                    <p>Aplicación web para la gestión de préstamos y registro de libros.</p>
-                </div>
-                <div class="item">
-                    <h3>Proyecto “Agua y Vida”</h3>
-                    <p>Sistema con sensores para analizar la potabilidad del agua.</p>
-                </div>
-                <div class="item">
-                    <h3>IA para Reciclaje</h3>
-                    <p>Clasificador de materiales entrenado en Teachable Machine e integrado a una aplicación web con JavaScript.</p>
-                </div>
-                <div class="item">
-                    <h3>Sitio Educativo sobre IA</h3>
-                    <p>Desarrollado con HTML, CSS y JavaScript junto a estudiantes para la divulgación tecnológica.</p>
+                <div style="display: flex; gap: 30px;">
+                    <div style="flex: 1;">
+                        <h2>Ponencias</h2>
+                        <ul class="bullet-list" style="font-size: 10.5px;">
+                            <li>Población afrodescendiente y Ley 19.122.</li>
+                            <li>Represión trans en dictaduras latam.</li>
+                        </ul>
+                    </div>
+                    <div style="flex: 1;">
+                        <h2>Proyectos</h2>
+                        <p style="font-size: 10px;"><strong>Docente Ágil:</strong> Planificación didáctica.</p>
+                        <p style="font-size: 10px;"><strong>IA Reciclaje:</strong> Clasificador en JS.</p>
+                        <p style="font-size: 10px;"><strong>Agua y Vida:</strong> Sensores de potabilidad.</p>
+                    </div>
                 </div>
             </section>
         </main>
